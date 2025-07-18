@@ -1,0 +1,18 @@
+@use './sass/base/reset.scss';
+@use './sass/abstracts/variables' as *;
+@use './sass/abstracts/mixins' as *;
+
+// Styles pour mobile (base)
+body{
+    @include padding(0 20px);
+}
+
+// Styles pour desktop et plus grand
+@media screen and (min-width: 1024px) {
+    body{
+        margin: 0 auto;
+        @include padding(0 100px);
+        max-width: 1440px;
+        border: 1px solid red;
+    }
+}
