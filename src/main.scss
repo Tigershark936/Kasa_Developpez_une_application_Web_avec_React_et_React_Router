@@ -4,6 +4,18 @@
 
 // Styles pour mobile (base)
 body{
+   height: 100%;
+    margin: 0; 
+}
+
+#root {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+}
+
+main{
+    flex: 1; //prend tout l’espace disponible dans la colonne
     @include padding(0 20px);
 }
 
