@@ -13,7 +13,7 @@
     @include margin(66px 0);
 }
 
-p{
+.p{
     @include textStyle($fontSize: 0.75rem, $color: $font-text-color);
     height: 46px;
     @include flex($alignItems:flex-end);
@@ -31,6 +31,5 @@ p{
 
     p {
         @include textStyle($fontSize: 1.5rem, $color: $font-text-color);
-
     }
 }

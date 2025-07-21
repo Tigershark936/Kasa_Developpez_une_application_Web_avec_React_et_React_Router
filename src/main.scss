@@ -4,7 +4,6 @@
 
 // Styles pour mobile (base)
 body{
-   height: 100%;
     margin: 0; 
 }
 
@@ -23,8 +22,11 @@ main{
 @media screen and (min-width: 1024px) {
     body{
         margin: 0 auto;
-        @include padding(0 100px);
         max-width: 1440px;
         border: 1px solid red;
+    }
+
+    main{
+        @include padding(0 100px);
     }
 }
