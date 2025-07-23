@@ -1,11 +1,10 @@
-import img from '../../assets/Falaise.png';
 import styles from './Banner.module.scss';
 
-function Banner(){
+function Banner({image, text, alt, className , titleClassName, imgClassName}){
     return (
-        <div className={styles.banner}>
-            <img src={img} alt='Falaises' className={styles.img}/>
-            <h1 className={styles.h1}>Chez vous, partout et ailleurs</h1>
+        <div className={`${styles.banner} ${className || ''}`}>
+            <img src={image} alt={alt} className={imgClassName}/>
+            {text && <h1 className={titleClassName}>{text}</h1>}
         </div>
     )
 }
