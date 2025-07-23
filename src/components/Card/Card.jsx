@@ -1,25 +1,14 @@
-import { Link } from 'react-router-dom';
-import { DescriptionHousing } from '../../data/DescriptionHousing';
-import styles from './Card.module.scss';
+import { Link } from 'react-router-dom'
+import styles from './Card.module.scss'
 
-function Card(){
-    // On crée un tableau de JSX avec .map()
-    const announces = DescriptionHousing.map((announce) => {
-        
-        return (
-        <div key={announce.id} className={styles.cardContainer}>
-            <Link  to='/' className={styles.card}>
-                <img src={announce.cover} alt='Picture logement' className={styles.img}/>
-                <h1 className={styles.h1}>{announce.title}</h1>
-            </Link>
-        </div>
-    )
-    });
-    
-    // On affiche le tableau dans le JSX
+function Card({ title, cover, id }) { 
+    console.log(title, cover, id);
     return (
-        <div className={styles.container}>
-            {announces}
+        <div key={id} className={styles.cardContainer}>
+            <Link to='/' className={styles.card}>
+                <img src={cover} alt='Picture logement' className={styles.img}/>
+                <h1 className={styles.h1}>{title}</h1>
+            </Link>
         </div>
     )
 }

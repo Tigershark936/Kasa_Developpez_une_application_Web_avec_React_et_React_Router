@@ -2,13 +2,6 @@
 @use '../../sass/abstracts/mixins' as *;
 
 // Styles pour mobile (base)
-.container {
-    background-color: rgba(246, 246, 246, 1);
-    @include margin(1.375rem 0 1.7rem 0); // 22px 0 27px 0
-    @include flex($orientation: column);
-    gap: 20px;
-}
-
 .card{
     display: block; //Comme <Link> rend un <a>, il faut lui dire en CSS de se comporter comme un bloc
     @include dimension($width: 335px, $height: 255px);
@@ -42,16 +35,6 @@
 
 // Styles pour desktop et plus grand
 @media screen and (min-width: 1024px) {
-
-    .container {
-        @include dimension($height: auto);
-        background-color: rgba(246, 246, 246, 1);
-        @include border($borderRadius: 10px);
-        @include flex($justifyContent: flex-start);
-        flex-wrap: wrap;
-        @include padding(56px 50px 43px 50px);
-        gap: 50px;
-    }
     
     .card{
         @include dimension($width: 340px, $height: 340px);
