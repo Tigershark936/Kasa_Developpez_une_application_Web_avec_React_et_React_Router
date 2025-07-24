@@ -14,7 +14,7 @@
 }
 
 .nav {
-    @include dimension($width:190px);
+    min-width: 190px;
     @include flex($justifyContent: flex-end, $alignItems: center);
     gap: 1.625rem; // ~26px
 }
@@ -38,5 +38,13 @@
         @include padding(0 100px);
         @include margin(45px 0 50px 0);
         @include flex($justifyContent: space-between)
-}
+    }
+
+    .logo{
+        @include dimension($width: auto)
+    }
+
+    .link {
+        @include textStyle($fontSize: 1.5rem);
+    }
 }

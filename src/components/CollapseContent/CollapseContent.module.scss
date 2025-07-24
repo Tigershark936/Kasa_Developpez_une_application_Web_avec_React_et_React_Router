@@ -5,10 +5,15 @@
 .text{
     @include textStyle();
     background-color: rgba(246, 246, 246, 1);
+    @include textStyle(400, normal, 0.75rem);
 }
 
 // Styles pour desktop et plus grand
 @media screen and (min-width: 1024px) {
 
-    
+    .text {
+        @include textStyle();
+        background-color: rgba(246, 246, 246, 1);
+        @include textStyle(400, normal, 1.125rem);
+    }
 }

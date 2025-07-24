@@ -29,7 +29,11 @@
     top: 188px;
     left: 20px;
     @include textStyle(
-        $fontWeight: 700, $fontStyle: bold, $fontSize: 1.125rem, $color: #fff);
+        $fontWeight: 700,
+        $fontStyle: bold,
+        $fontSize: 1.125rem,
+        $color: #fff
+    );
     padding-right: 20px;
 }
 
