@@ -1,7 +1,7 @@
 import logo from '../../assets/logokasawhite.png';
 import styles from './Footer.module.scss';
 
-function Footer(){
+const Footer = () => {
     return (
         <footer className={styles.footer}>
             <div className={styles.container}>

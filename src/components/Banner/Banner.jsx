@@ -1,6 +1,6 @@
 import styles from './Banner.module.scss';
 
-function Banner({image, text, alt, className , titleClassName, imgClassName}){
+const Banner = ({image, text, alt, className , titleClassName, imgClassName}) => {
     return (
         <div className={`${styles.banner} ${className || ''}`}>
             <img src={image} alt={alt} className={imgClassName}/>

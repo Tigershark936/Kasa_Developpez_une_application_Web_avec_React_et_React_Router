@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom'
 import styles from './Card.module.scss'
 
-function Card({ title, cover, id }) { 
+const Card = ({ title, cover, id }) => { 
     console.log(title, cover, id);
     return (
         <div key={id} className={styles.cardContainer}>

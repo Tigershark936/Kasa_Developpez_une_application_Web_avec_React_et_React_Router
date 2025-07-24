@@ -4,7 +4,7 @@ import Card from "../../components/Card/Card";
 import { DescriptionHousing } from "../../data/DescriptionHousing";
 import styles from '../../pages/Home/Home.module.scss';
 
-function Home() {
+const Home = () => {
   return (
     <>
       <Banner

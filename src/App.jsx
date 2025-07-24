@@ -1,6 +1,6 @@
 import AppRouter from './components/Router.jsx';
 
-function App() {
+const App = () => {
   return <AppRouter />;
 }
 
