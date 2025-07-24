@@ -3,8 +3,9 @@
 @use './sass/abstracts/mixins' as *;
 
 // Styles pour mobile (base)
-body{
+html, body{
     margin: 0; 
+    height: auto;
 }
 
 #root {
@@ -23,7 +24,7 @@ main{
     body{
         margin: 0 auto;
         max-width: 1440px;
-        border: 1px solid red;
+        border: 3px solid green;
     }
 
     main{

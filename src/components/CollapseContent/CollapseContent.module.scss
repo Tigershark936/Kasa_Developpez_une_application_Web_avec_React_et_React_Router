@@ -1,0 +1,14 @@
+@use '../../sass/abstracts/variables' as *;
+@use '../../sass/abstracts/mixins' as *;
+
+// Styles pour mobile (base)
+.text{
+    @include textStyle();
+    background-color: rgba(246, 246, 246, 1);
+}
+
+// Styles pour desktop et plus grand
+@media screen and (min-width: 1024px) {
+
+    
+}
