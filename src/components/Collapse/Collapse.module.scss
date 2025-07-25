@@ -3,31 +3,54 @@
 
 // Styles pour mobile (base)
 .box {
-    @include dimension($width: 100%);
+    @include dimension($width: 100%, $height: auto);
     background-color: $background-color;
     @include border($borderRadius: 5px);
     overflow: hidden;
 }
 
-.toggleBar{
-    @include dimension($width: 100%, $height: 30px);
-    padding: 0 10px; 
-    @include flex($justifyContent: space-between);
+.toggleBar {
+	background-color: $background-color;
+	@include dimension($width: 100%, $height: 30px);
+	@include flex($justifyContent: space-between, $alignItems: center);
+	text-align: center;
+	@include padding(0 15px);
+	@include border($borderRadius: 5px);
+
+	@media screen and (min-width: 1024px) {
+		@include dimension($width: 100%, $height: 52px);
+		@include border($borderRadius: 10px);
+	}
 }
 
 .toggleBarH2 {
     @include textStyle(700, bold, 0.813rem, $font-text, #fff);
 }
 
-.faChevronUp, .faChevronDown {
-    color: #fff;
-    padding-right: 12px;
+.iconWrapper {
+	@include flex();
+	background: none;
+	border: none;
+	padding: 0;
+	cursor: pointer;
 }
 
-.content {
-    background-color: rgba(246, 246, 246, 1);
-    @include padding(20px 20px)
+.chevron {
+    color: #fff;
+	display: inline-block;
+	@include dimension($width: 16px);
+	transform-origin: center center;
+	transition: transform 0.4s ease-in-out;
+
+    @media screen and (min-width: 1024px) {
+		@include dimension($width: 32px); // taille desktop
+	}
 }
+
+.rotate {
+	transform: rotate(-180deg);
+}
+
 
 // Styles pour desktop et plus grand
 @media screen and (min-width: 1024px) {
@@ -35,18 +58,15 @@
     .box{
         @include dimension($width: 100%);
         @include border($borderRadius: 10px);
+        border: 2px solid black;
     }
 
     .toggleBar{
         @include dimension($width: 100%, $height: 52px);
     }
+
     .toggleBarH2 {
         @include textStyle(700, bold, 1.5rem, $font-text, #fff);
     }
 
-    .faChevronUp, .faChevronDown {
-        @include dimension($width: 32px, $height: 32px);
-        color: #fff;
-        padding-right: 12px;
-    }
 }

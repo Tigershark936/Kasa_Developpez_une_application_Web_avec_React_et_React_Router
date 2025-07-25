@@ -1,8 +1,8 @@
 import styles from './CollapseContent.module.scss';
 
-const CollapseContent = ({text}) => {
+const CollapseContent = ({text, isOpen}) => {
     return (
-        <p className={styles.text}>{text}</p>
+        <p className={`${styles.text} ${isOpen ? styles.show : ''}`}>{text}</p>
     )
 }
 

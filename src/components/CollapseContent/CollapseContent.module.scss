@@ -1,19 +1,28 @@
 @use '../../sass/abstracts/variables' as *;
 @use '../../sass/abstracts/mixins' as *;
 
+// Valeur max estimée pour le contenu déplié
+$max-collapse-height: 500px;
+
 // Styles pour mobile (base)
-.text{
-    @include textStyle();
-    background-color: rgba(246, 246, 246, 1);
-    @include textStyle(400, normal, 0.75rem);
+.text {
+	max-height: 0;
+	overflow: hidden;
+	transition: max-height 0.2s ease, padding 0.3s ease-in-out;
+	background-color: rgba(246, 246, 246, 1);
+	@include textStyle(400, normal, 0.75rem);
+	display: block;
+}
+
+.show {
+	max-height: $max-collapse-height;
+	@include padding(20px 20px);
 }
 
 // Styles pour desktop et plus grand
 @media screen and (min-width: 1024px) {
 
-    .text {
-        @include textStyle();
-        background-color: rgba(246, 246, 246, 1);
-        @include textStyle(400, normal, 1.125rem);
-    }
+	.text {
+		@include textStyle(400, normal, 1.125rem);
+	}
 }

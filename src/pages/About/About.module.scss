@@ -15,9 +15,8 @@
 
 .container {
     @include dimension($width: 335px);
-    min-height: 298px;
-    border: 2px solid navy;
-    @include margin(19px 0 19px 0);
+    // border: 2px solid navy;
+    @include margin(19px 0);
     @include flex($justifyContent: flex-start, $orientation: column);
     gap: 20px;
     overflow: visible;
@@ -27,9 +26,9 @@
 @media screen and (min-width: 1024px){
 
     .container{
-        @include margin(38px 0 38px 0);
         @include dimension($width: 100%);
-        min-height: 298px;
+        @include margin(38px 0);
+        @include padding(0 108.5px);
         gap: 30px;
     }
 }
