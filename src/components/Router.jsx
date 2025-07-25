@@ -13,7 +13,7 @@ import Layout from "./Layout/Layout";
 import Home from '../pages/Home/Home';
 import About from "../pages/About/About";
 // import HousingPage from '../pages/HousingPage';
-// import NotFound from '../pages/NotFound';
+import NotFound from "../pages/NotFound/NotFound";
 
 function AppRouter() { // On crée un composant React qui retourne la logique du router.
     return (
@@ -33,7 +33,7 @@ function AppRouter() { // On crée un composant React qui retourne la logique du
                     Le :id est une variable que tu pourras lire avec useParams(). */}
                     {/* <Route path="/housing/:id" element={<HousingPage/>}/> */}
                     {/* ➡ Le joker * : si l’URL ne correspond à aucune des routes ci‑dessus, il affiche la page NotFound (404). */}
-                    {/* <Route path="*" element={<NotFound/>}/> */}
+                    <Route path="*" element={<NotFound/>}/>
                 </Route>
             </Routes>
         </BrowserRouter>

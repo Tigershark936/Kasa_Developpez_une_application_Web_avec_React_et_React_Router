@@ -19,10 +19,11 @@
     gap: 1.625rem; // ~26px
 }
 
-.link {
+.p {
     text-decoration: none;
     @include textStyle($fontSize: 0.75rem);
     transition: text-decoration 0.3s ease;
+    text-transform: uppercase;
 
     &:hover {
         text-decoration: underline;
@@ -44,7 +45,8 @@
         @include dimension($width: auto)
     }
 
-    .link {
+    .p {
         @include textStyle($fontSize: 1.5rem);
+        text-transform: none;
     }
 }
