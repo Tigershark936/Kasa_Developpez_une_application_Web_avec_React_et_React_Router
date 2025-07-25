@@ -27,7 +27,7 @@
     text-align: center;
 }
 
-.link {
+.p {
     text-decoration: none;
     @include textStyle($fontSize: 0.875rem);
     transition: text-decoration 0.3s ease;
@@ -64,7 +64,7 @@
         text-align: center;
     }
 
-    .link {
+    .p {
         @include textStyle($fontSize: 1.125rem);
     }
  }

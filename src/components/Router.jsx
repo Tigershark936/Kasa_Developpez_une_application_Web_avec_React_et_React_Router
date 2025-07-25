@@ -12,7 +12,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Layout from "./Layout/Layout";
 import Home from '../pages/Home/Home';
 import About from "../pages/About/About";
-// import HousingPage from '../pages/HousingPage';
+import HousingPage from "../pages/HousingPage/HousingPage";
 import NotFound from "../pages/NotFound/NotFound";
 
 function AppRouter() { // On crée un composant React qui retourne la logique du router.
@@ -31,7 +31,7 @@ function AppRouter() { // On crée un composant React qui retourne la logique du
                     <Route path="about" element={<About />} />
                     {/* ➡ Pour la page des logements avec un identifiant dynamique (/housing/123 par exemple), il affiche HousingPage.
                     Le :id est une variable que tu pourras lire avec useParams(). */}
-                    {/* <Route path="/housing/:id" element={<HousingPage/>}/> */}
+                    <Route path="/housing/:id" element={<HousingPage/>}/>
                     {/* ➡ Le joker * : si l’URL ne correspond à aucune des routes ci‑dessus, il affiche la page NotFound (404). */}
                     <Route path="*" element={<NotFound/>}/>
                 </Route>
