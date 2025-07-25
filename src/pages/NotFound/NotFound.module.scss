@@ -38,7 +38,8 @@
     }
 }
 
- @media screen and (min-width: 1024px) {
+// Styles pour desktop et plus grand
+@media screen and (min-width: 1024px) {
 
     .container {
         gap: 139px;
