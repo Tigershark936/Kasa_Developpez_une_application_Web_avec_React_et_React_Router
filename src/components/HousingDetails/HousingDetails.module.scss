@@ -1,0 +1,71 @@
+@use '../../sass/abstracts/variables' as *;
+@use '../../sass/abstracts/mixins' as *;
+
+// Styles pour mobile (base)
+.container {
+    @include dimension($width: 100%, $height: auto);
+    margin-top: 15px;
+    margin-bottom: 27px;
+}
+
+.infoWrapper {
+    @include flex($justifyContent: flex-start, $alignItems: flex-start, $orientation: column);
+}
+
+.row {
+    @include flex($alignItems: flex-start, $orientation: column);
+}
+
+.ratingHostMobile {
+    @include flex($justifyContent:space-between);
+    gap: 101px;
+}
+
+.ratingStarsDesktop {
+    display: none; // Par défaut caché en mobile
+}
+
+.hostdesktopOnly {
+  display: none;
+}
+
+.dropdown {
+    @include flex($justifyContent: space-between, $orientation: column);
+    gap: 20px;
+    margin-top: 13px;
+    margin-bottom: 27px;
+}
+
+// Styles pour desktop et plus grand
+@media screen and (min-width: 768px) {
+
+    .container {
+        margin-top: 30px;
+        margin-bottom: 50px;
+    }
+    .infoWrapper {
+        @include flex($orientation: column);
+    }
+
+    .row {
+        @include dimension($width: 100%);
+        @include flex($justifyContent:space-between, $alignItems: flex-start);
+    }
+
+    .ratingHostMobile {
+        display: none;
+    }
+
+    .hostdesktopOnly {
+        display: block;
+    }
+
+    .ratingStarsDesktop {
+        display: block;
+    }
+
+    .dropdown {
+        @include flex($justifyContent: space-between, $alignItems: flex-start, $orientation: row);
+        gap: 76px;
+    }
+}

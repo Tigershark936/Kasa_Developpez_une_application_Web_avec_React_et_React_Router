@@ -2,6 +2,7 @@ import { DescriptionHousing } from "../../data/DescriptionHousing";
 import Slideshow from "../../components/Slideshow/Slideshow";
 import { useParams } from "react-router-dom";
 import NotFound from '../NotFound/NotFound';
+import HousingDetails from "../../components/HousingDetails/HousingDetails";
 
 
 const HousingPage = () => {
@@ -20,9 +21,14 @@ const HousingPage = () => {
     const pictures = selectedHousing.pictures;
 
     return (
-        < Slideshow 
-            pictures={pictures}
-        />
+        <>
+            < Slideshow 
+                pictures={pictures}
+            />
+            < HousingDetails 
+                
+            />
+        </>
     )
 }
 

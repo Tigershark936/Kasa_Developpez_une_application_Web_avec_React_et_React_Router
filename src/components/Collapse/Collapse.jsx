@@ -17,29 +17,26 @@ const Collapse = ({title, children}) => {
     }
 
     return (
-        <>
-            <div className={styles.box}>
-                <div className={styles.toggleBar}>
-                    <h2 className={styles.toggleBarH2}>{title}</h2>
-                    <button onClick={handleClick} className={styles.iconWrapper}>
-                        < FontAwesomeIcon 
-                            icon={faChevronUp}
-                            className={`${styles.chevron} ${isOpen ? styles.rotate : ''}`}
-                        />
-                    </button>
-                </div>
-
+        <div className={styles.box}>
+            <div className={styles.toggleBar}>
+                <h2 className={styles.toggleBarH2}>{title}</h2>
+                <button onClick={handleClick} className={styles.iconWrapper}>
+                    < FontAwesomeIcon 
+                        icon={faChevronUp}
+                        className={`${styles.chevron} ${isOpen ? styles.rotate : ''}`}
+                    />
+                </button>
             </div>
 
             {/* Affiche .content seulement si isOpen est true */}
-			{isOpen && (
-				<div className={styles.content}>
-					{children && typeof children === 'object'
-						? React.cloneElement(children, { isOpen })
-						: children}
-				</div>
-			)}
-        </>
+            {isOpen && (
+                <div className={styles.content}>
+                    {children && typeof children === 'object'
+                        ? React.cloneElement(children, { isOpen })
+                        : children}
+                </div>
+            )}
+        </div>
     )
 }
 

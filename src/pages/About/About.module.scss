@@ -14,8 +14,7 @@
 }
 
 .container {
-    @include dimension($width: 335px);
-    // border: 2px solid navy;
+    min-width: 335px;
     @include margin(19px 0);
     @include flex($justifyContent: flex-start, $orientation: column);
     gap: 20px;

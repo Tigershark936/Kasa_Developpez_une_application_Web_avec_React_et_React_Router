@@ -4,7 +4,7 @@
 // Styles pour mobile (base)
 .box {
     @include dimension($width: 100%, $height: auto);
-    background-color: $background-color;
+    background-color: rgba(246, 246, 246, 1);
     @include border($borderRadius: 5px);
     overflow: hidden;
 }
@@ -58,7 +58,6 @@
     .box{
         @include dimension($width: 100%);
         @include border($borderRadius: 10px);
-        border: 2px solid black;
     }
 
     .toggleBar{
