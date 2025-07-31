@@ -9,7 +9,7 @@
 }
 
 .name {
-    @include dimension($width: 93px);
+    @include dimension($width: 53px);
     @include textStyle(
         $fontSize: 0.75rem,
         $color: $background-color, 

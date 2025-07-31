@@ -11,38 +11,25 @@ const HousingDetails = ({ title, location, tags, rating, host, description, equi
         <div className={styles.container}>
             <div className={styles.infoWrapper}>
 
-                {/* LIGNE 1 : titre à gauche, HostInfo visible SEULEMENT en desktop */}
-                <div className={styles.row}>
+                <div className={styles.TitleLocationTags}>
                     <TitleLocation 
                         title={title}
                         location={location}
                     />
-                    <div className={styles.hostdesktopOnly}>
-                        <HostInfo 
-                            host={host}
-                        />
-                    </div>
-                </div>
-
-                {/* LIGNE 2 : tags à gauche, RatingStars + HostInfo (visible uniquement en mobile) */}
-                <div className={styles.row}>
                     <Tags tags={tags}/>
-                    <div className={styles.ratingHostMobile}>
-                        <RatingStars 
-                            rating={rating} 
-                        />
-                        <HostInfo 
-                            host={host}
-                        />
-                    </div>
-                    <div className={styles.ratingStarsDesktop}>
-                        <RatingStars 
-                            rating={rating}
-                        />
-                    </div>
                 </div>
-
+        
+                <div className={styles.ratingStarsHostInfo}>
+                    <HostInfo 
+                        host={host}
+                    />
+                    <RatingStars 
+                        rating={rating}
+                    />
+                </div>
+                
             </div>
+
             <div className={styles.dropdown}>
                 <Collapse title="Description">
                     <CollapseContent description={description} />

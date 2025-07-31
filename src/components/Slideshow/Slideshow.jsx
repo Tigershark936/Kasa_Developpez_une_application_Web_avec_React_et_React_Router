@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { useState } from 'react';
 
 const Slideshow = ({pictures}) => {
-    console.log(pictures.length)
+    // console.log(pictures.length)
 
     const [currentIndex, setCurrentIndex] = useState(0);
 

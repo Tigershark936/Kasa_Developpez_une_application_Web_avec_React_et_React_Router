@@ -8,25 +8,14 @@
     margin-bottom: 27px;
 }
 
-.infoWrapper {
-    @include flex($justifyContent: flex-start, $alignItems: flex-start, $orientation: column);
+.TitleLocationTags {
+    @include flex($justifyContent: start, $alignItems: flex-start, $orientation:column);
 }
 
-.row {
-    @include flex($alignItems: flex-start, $orientation: column);
-}
-
-.ratingHostMobile {
-    @include flex($justifyContent:space-between);
-    gap: 101px;
-}
-
-.ratingStarsDesktop {
-    display: none; // Par défaut caché en mobile
-}
-
-.hostdesktopOnly {
-  display: none;
+.ratingStarsHostInfo {
+    @include flex($justifyContent: space-between);
+    flex-direction: row-reverse;
+    text-align: center;
 }
 
 .dropdown {
@@ -43,26 +32,14 @@
         margin-top: 30px;
         margin-bottom: 50px;
     }
+
     .infoWrapper {
-        @include flex($orientation: column);
+        @include flex($justifyContent: space-between, $alignItems: start);
     }
 
-    .row {
-        @include dimension($width: 100%);
-        @include flex($justifyContent:space-between, $alignItems: center);
-    }
-
-    .ratingHostMobile {
-        display: none;
-    }
-
-    .hostdesktopOnly {
-        display: block;
-    }
-
-    .ratingStarsDesktop {
-        display: block;
-
+    .ratingStarsHostInfo {
+        @include flex($justifyContent: start, $alignItems: flex-end, $orientation:column);
+        gap: 21px;
     }
 
     .dropdown {
