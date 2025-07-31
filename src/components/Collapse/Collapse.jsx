@@ -1,19 +1,20 @@
 import styles from './Collapse.module.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronUp } from '@fortawesome/free-solid-svg-icons';
-import { useState } from 'react';
+import { use, useState } from 'react';
 import React from 'react';
 
 
 const Collapse = ({title, children}) => {
     const [isOpen, setIsOpen] = useState(false);
-    
+    // const [ isRotated, setIsRotated] = useState(false);
+
     const handleClick = () => {
         setIsOpen(!isOpen);   
         
-        setTimeout(() => {
-			setIsRotated(!isOpen);
-		}, 0);
+        // setTimeout(() => {
+		// 	setIsRotated(!isRotated);
+		// }, 5000);
     }
 
     return (

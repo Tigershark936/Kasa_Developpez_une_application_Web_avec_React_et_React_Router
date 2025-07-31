@@ -1,42 +1,57 @@
 import { DescriptionHousing } from "../../data/DescriptionHousing";
 import Slideshow from "../../components/Slideshow/Slideshow";
 import { useParams } from "react-router-dom";
-import NotFound from '../NotFound/NotFound';
+import { useEffect , useState } from "react";
+import { useNavigate } from "react-router";
 import HousingDetails from "../../components/HousingDetails/HousingDetails";
 
 
 const HousingPage = () => {
     // 1.Récupérer l'ID depuis l'URL
     const { id } = useParams();
+    // 2. Instancier le hook de navigation
+    // ➜ Permet de rediriger l'utilisateur vers une autre page de l'application via le code (ex: après une erreur, une action ou un clic)
+    const navigate = useNavigate()
 
-    // 2.Chercher le logement dans la data
-    const selectedHousing = DescriptionHousing.find((housing) => housing.id === id);
-    
-    // 3.Si le logement n’existe pas → afficher NotFound
-    if(!selectedHousing){
-        return <NotFound />;
+    const [selectedHousing, setSelectedHousing] = useState(null);
+
+    useEffect(() => {
+        // 2.Chercher le logement dans la data
+        const findHousing = DescriptionHousing.find((housing) => housing.id === id);
+
+        // 3.Si le logement n'existe pas → afficher NotFound
+        if(findHousing){
+            setSelectedHousing(findHousing);
+        } else {
+            navigate('/notfound');
+        }
+
+    }, [id]);
+
+
+    if (!selectedHousing) {
+        return <></>
     }
 
-    // 4.Si le logement existe → j'accéder à ses données
     const {
-        title,
-        location,
-        tags,
-        rating,
-        host,
-        description,
-        equipments,
-        pictures
-    } = selectedHousing;
+            title,
+            location,
+            tags,
+            rating,
+            host,
+            description,
+            equipments,
+            pictures
+        } = selectedHousing;
 
     return (
         <>
-            < Slideshow 
+            < Slideshow
                 pictures={pictures}
             />
-            <HousingDetails 
+            <HousingDetails
                 title={title}
-                city={location}
+                location={location}
                 tags={tags}
                 rating={rating}
                 host={host}
