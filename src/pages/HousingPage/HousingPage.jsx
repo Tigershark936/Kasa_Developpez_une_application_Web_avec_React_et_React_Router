@@ -18,15 +18,30 @@ const HousingPage = () => {
     }
 
     // 4.Si le logement existe → j'accéder à ses données
-    const pictures = selectedHousing.pictures;
+    const {
+        title,
+        location,
+        tags,
+        rating,
+        host,
+        description,
+        equipments,
+        pictures
+    } = selectedHousing;
 
     return (
         <>
             < Slideshow 
                 pictures={pictures}
             />
-            < HousingDetails 
-                
+            <HousingDetails 
+                title={title}
+                city={location}
+                tags={tags}
+                rating={rating}
+                host={host}
+                description={description}
+                equipments={equipments}
             />
         </>
     )

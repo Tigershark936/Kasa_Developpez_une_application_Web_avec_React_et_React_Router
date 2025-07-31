@@ -49,7 +49,7 @@
 
     .row {
         @include dimension($width: 100%);
-        @include flex($justifyContent:space-between, $alignItems: flex-start);
+        @include flex($justifyContent:space-between, $alignItems: center);
     }
 
     .ratingHostMobile {
@@ -62,6 +62,7 @@
 
     .ratingStarsDesktop {
         display: block;
+
     }
 
     .dropdown {

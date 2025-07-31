@@ -9,31 +9,28 @@
     margin-bottom: 16px;
 }
 
-.text {
-    @include dimension($width: 84px, $height: 18px);
+.span {
+    min-width: 84px;
+    @include dimension($height: 18px);
     background-color: $background-color;
     @include border($borderRadius: 10px);
     @include flex();
-}
-
-.p { 
     @include textStyle($fontWeight: 700, $fontSize: 0.625rem, $color: #fff);
+    @include padding(0 5px);
 }
 
 // Styles pour desktop et plus grand
 @media screen and (min-width: 1024px) {
-
-	.container {
-		@include dimension($height: 25px);
+    .container {
+        @include dimension($height: 25px);
         margin-top: 20px;
         margin-bottom: 24px;
-	}
-
-    .text {
-        @include dimension($width: 115px, $height: 25px);
     }
 
-    .p { 
+    .span {
+        min-width: 115px;
+        @include dimension($height: 25px);
         @include textStyle($fontWeight: 700, $fontSize: 0.875rem, $color: #fff);
+        @include padding(0 10px);
     }
 }

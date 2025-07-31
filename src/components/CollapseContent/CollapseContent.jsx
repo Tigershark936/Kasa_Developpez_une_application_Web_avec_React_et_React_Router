@@ -1,9 +1,24 @@
 import styles from './CollapseContent.module.scss';
 
-const CollapseContent = ({text, isOpen}) => {
+const CollapseContent = ({ text, description, equipments, isOpen }) => {
+  const contentClass = `${styles.text} ${isOpen ? styles.show : ''}`;
+
+  if (equipments) {
     return (
-        <p className={`${styles.text} ${isOpen ? styles.show : ''}`}>{text}</p>
-    )
-}
+      <ul className={contentClass}>
+        {equipments.map((item, index) => (
+          <li key={index}>{item}</li>
+        ))}
+      </ul>
+    );
+  }
+
+  return (
+    <p className={contentClass}>
+      {description || text}
+    </p>
+  );
+};
+
 
 export default CollapseContent
