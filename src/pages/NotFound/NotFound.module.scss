@@ -23,9 +23,13 @@
     @include textStyle(
         $fontSize: 1.125rem,
         $color: $background-color,
-    );
+        );
     text-align: center;
 }
+
+span {
+    display: block; // force à aller à la ligne
+  }
 
 .p {
     text-decoration: none;
@@ -65,6 +69,10 @@
         text-align: center;
     }
 
+    span {
+        display: inline;
+    }
+    
     .p {
         @include textStyle($fontSize: 1.125rem);
     }
