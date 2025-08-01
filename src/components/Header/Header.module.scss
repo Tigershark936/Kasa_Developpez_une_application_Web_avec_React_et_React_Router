@@ -28,7 +28,13 @@
     &:hover {
         text-decoration: underline;
         text-underline-offset: 3px; // espace entre le texte et la ligne
+        opacity: 0.7;
     }
+}
+
+.active {
+  text-decoration: underline;
+  text-underline-offset: 3px;
 }
 
 // Styles pour desktop et plus grand
@@ -49,4 +55,5 @@
         @include textStyle($fontSize: 1.5rem);
         text-transform: none;
     }
+    
 }
