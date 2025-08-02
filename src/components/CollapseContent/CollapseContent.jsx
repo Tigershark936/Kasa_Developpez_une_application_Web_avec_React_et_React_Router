@@ -12,9 +12,7 @@ const CollapseContent = ({ text, description, equipments, isOpen }) => {
   }, [isOpen]);
 
   return (
-    <div
-      className={styles.content}
-      style={{ maxHeight }}
+    <div className={`${styles.content} ${isOpen ? styles.open : styles.closed}`}
       ref={contentRef}
     >
       {equipments ? (

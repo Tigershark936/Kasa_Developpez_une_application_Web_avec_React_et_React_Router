@@ -16,7 +16,7 @@
 .p{
     @include textStyle($fontSize: 0.75rem, $color: $font-text-color);
     height: 46px;
-    @include flex($alignItems:flex-end);
+    @include flex($alignItems:flex-start);
     text-align: center;
     width: calc(100% - 250px);
 }
